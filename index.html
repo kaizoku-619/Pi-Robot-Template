@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Dashboard</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="icon" href="images/favicon.ico" type="image/icon" sizes="16x16">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="script.js" ></script>
+      <style>
+      	#cam_buttons {
+		    position: absolute;
+		    right: 40px;
+		    top: 149px;
+		    z-index: -1;
+		}
+      </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse ">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">Pi Robot</a>
+            </div>
+          </div>
+        </nav>
+        <div class="container">
+        	<div class="row">
+  		    	<div class="col-sm-6">
+					<h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRobot Controls</h1>
+					<br><br><br><br>
+					<h2>Robot</h2>
+					<img hspace="20" style="padding-left: 10px">
+					<button type="button" class="btn btn-primary btn-lg" onclick="on()">&nbspForward&nbsp</button>
+					<br><br>
+					<button type="button" class="btn btn-primary btn-lg" onclick="on()">Left&nbsp</button>
+					<button type="button" class="btn btn-primary btn-lg" onclick="on()">Stop</button>
+					<button type="button" class="btn btn-primary btn-lg" onclick="on()">Right</button>
+					<br><br>
+					<img hspace="20" style="padding-left:10px">
+					<button type="button" class="btn btn-primary btn-lg" onclick="on()">Backward</button>
+					<br><br>
+					<button type="button" class="btn btn-primary btn-lg" onclick="on()">LED ON&nbsp</button>
+					<button type="button" class="btn btn-primary btn-lg" onclick="off()">LED OFF</button>
+					<br>
+					<div id="cam_buttons">
+						<h2>Cam</h2>
+	  		    		<img hspace="20" style="padding-left: 40px">
+						<button type="button" class="btn btn-primary btn-lg" onclick="on()">&nbsp&nbspUp&nbsp&nbsp</button>
+						<br><br>
+						<button type="button" class="btn btn-primary btn-lg" onclick="on()">&nbspLeft&nbsp</button>
+						<button type="button" class="btn btn-primary btn-lg" onclick="on()">Center</button>
+						<button type="button" class="btn btn-primary btn-lg" onclick="on()">Right</button>
+						<br><br>
+						<img hspace="20" style="padding-left:40px">
+						<button type="button" class="btn btn-primary btn-lg" onclick="on()">Down</button>
+  		    		</div>
+					<br>
+  		    		<button type="button" class="btn btn-primary btn-lg btn-block">Rover Robot Mode</button>
+  		    		<button type="button" class="btn btn-primary btn-lg btn-block">Line Follower Mode</button>
+  		    	</div>
+
+  		    	<div class="col-sm-6">
+  		    		<div id="cam">
+		    			<h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVideo Streaming</h1>
+		    			<br>
+						<iframe src="http://<Your Pi's IP Here>:8081" frameborder="0" align="middle" width="640" height="480" align="middle" scrolling="no"> -->
+  		    		</div>
+  		      	</div>
+    		</div>
+        </div>
+    </body>
+</html>
